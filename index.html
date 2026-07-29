@@ -11,37 +11,37 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/svg+xml" href="icons8-calculator.svg">
+    <link rel="icon" type="image/svg+xml" href="icons8-calculator.svg" />
   </head>
   <body>
-    <p class="head">Your calculator</p>
-    
+
     <div class="fake-body">
-    <div class="whole-grid">
-      <input class="input" inputmode="numeric" />
-      <div class="numbers">
-        <button class="operator">AC</button>
-        <button class="operator">DEL</button>
-        <button class="operator">%</button>
-        <button class="operator">/</button>
-        <button class="number">7</button>
-        <button class="number">8</button>
-        <button class="number">9</button>
-        <button class="operator">*</button>
-        <button class="number">4</button>
-        <button class="number">5</button>
-        <button class="number">6</button>
-        <button class="operator">-</button>
-        <button class="number">1</button>
-        <button class="number">2</button>
-        <button class="number">3</button>
-        <button class="operator">+</button>
-        <button class="number">0</button>
-        <button class="number">.</button>
-        <button class="operator">X</button>
-        <button class="operator">=</button>
+      <div class="whole-grid">
+        <input class="input" inputmode="numeric" onkeydown="if(event.key === 'Enter') equals();"/>
+        <div class="numbers">
+          <button class="operator" onclick="ac()">AC</button>
+          <button class="operator" onclick="del()">DEL</button>
+          <button class="operator" onclick="calc('%')">%</button>
+          <button class="operator" onclick="calc('/')">/</button>
+          <button class="number" onclick="calc('7')">7</button>
+          <button class="number" onclick="calc('8')">8</button>
+          <button class="number"onclick="calc('9')">9</button>
+          <button class="operator" onclick="calc('*')">*</button>
+          <button class="number" onclick="calc('4')">4</button>
+          <button class="number" onclick="calc('5')">5</button>
+          <button class="number" onclick="calc('6')">6</button>
+          <button class="operator" onclick="calc('-')">-</button>
+          <button class="number" onclick="calc('1')">1</button>
+          <button class="number"onclick="calc('2')">2</button>
+          <button class="number" onclick="calc('3')">3</button>
+          <button class="operator" onclick="calc('+')">+</button>
+          <button class="number" onclick="calc('0')">0</button>
+          <button class="number" onclick="calc('.')">.</button>
+          <button class="operator" onclick="equals()">=</button>
+        </div>
       </div>
     </div>
-    </div>
+    
+    <script src="calculator.js"> </script>
   </body>
 </html>
